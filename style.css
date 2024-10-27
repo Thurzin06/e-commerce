@@ -151,6 +151,9 @@ padding: 1rem;
 /*header*/
 
 /*main*/
+main{
+    background-color: white;
+}
 
 .green-background{
     background-color: rgb(0, 56, 0);
@@ -174,4 +177,51 @@ padding: 1rem;
 img{
     width: 350px;
   height: auto;
+}
+.colums-3 img{
+    max-width: 100%;
+}
+.colums-4 img{
+    max-width: 100%;
+} 
+.colums-4{
+    grid-template-columns:  repeat(4, 1fr);
+    gap: 1rem;
+} 
+.colums>*div{
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.colums>*:hover{
+    transform: translateY(-5px);
+}
+.section-title{
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.8rem;
+}
+.subtitle-underline{
+    width: 100px;
+    height: 5px;
+    background-color: blue;
+    border-radius: 9999px;
+    margin: 8px auto 0 auto;
+}
+.product{
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.product-name{
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+.rate{
+    color: rgb(0, 47, 255);
+    font-size: 1.3rem;
+}
+.product-price span{
+    font-weight: 600;
+
 }
