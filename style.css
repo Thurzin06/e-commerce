@@ -1,96 +1,129 @@
-/* Estilos gerais */
-* {
+*{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
-body {
+body{
     font-family: Arial;
-    margin-top: 70px; /* Espaço suficiente para a navbar */
-    padding-top: 20px; /* Adiciona um pequeno espaçamento superior */
-    overflow-x: hidden; /* Impede o overflow horizontal, caso algo ultrapasse */
 }
-
-/* Header */
-.navbar {
+/*header*/
+.header-inner-content{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar{
     background-color: rgb(2, 94, 2);
     padding: 1rem;
-    position: fixed; /* Fixa a navbar no topo */
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%; /* Para ocupar toda a largura */
     box-shadow: 10px 0px 10px rgb(0, 56, 0);
-    z-index: 99; /* Garante que a navbar fique acima de outros elementos */
+    z-index: 99;
+}
+.navbar>div{
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center; /* Alinha logo e itens da navbar */
+    position: relative;
 }
-
-/* Logo */
-.logo {
+.logo{
     color: white;
-    font-size: 1.5rem; /* Ajuste o tamanho da logo se necessário */
-}
 
-.logo span {
+}
+.logo span{
     color: black;
 }
-
-/* Itens do menu */
-nav ul {
+nav ul{
     display: flex;
     list-style: none;
     align-items: center;
 }
-
-.nav-icon-container {
+.nav-icon-container{
     display: flex;
     align-items: center;
 }
-
-.nav-icon-container img {
+.nav-icon-container img{
     width: 30px;
     cursor: pointer;
 }
-
-.nav-icon-container img:first-child {
+.nav-icon-container img:first-child{
     margin-right: 1rem;
 }
-
-nav ul li {
+nav ul li{
     color: white;
     margin-right: 1.5rem;
     cursor: pointer;
 }
-
-nav ul li:hover {
+nav ul li:hover{
     transform: translateY(-5px);
     transition: all 0.2s;
     font-weight: bold;
 }
-
-.menu-button {
+.menu-button{
     display: none;
 }
+header{
+    background-image: radial-gradient(#fff, #c7c7c7);
+}
+.header-bottom-side{
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 1rem;
+}
+.header-bottom-side-left{
+    height: 100%;
+    flex-basis: 50%;
+}
+.header-bottom-side-left h2{
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
 
-/* Responsividade - Menu em dispositivos menores */
-@media (max-width: 800px) {
-    .logo {
+}
+.header-bottom-side-left p{
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.header-bottom-side-left button{
+    background-color: rgb(31, 136, 5);
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 3.8rem;
+    border-radius: 9999px;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.header-bottom-side-left button:hover{
+    background-color: rgb(12, 182, 6);
+    transition: all 0.2s;
+}
+.header-bottom-side-right{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-bottom-side-right img{
+    width: 115%;
+}
+
+@media (max-width: 800px){
+    .logo{
         font-size: 1.2rem;
     }
 
-    .menu-button {
+    .menu-button{
         display: block;
     }
 
-    .header-bottom-side {
+    .header-bottom-side{
         flex-direction: column;
         text-align: center;
         padding-top: 4rem;
     }
 
-    nav {
+    nav{
         position: absolute;
         background-color: rgb(0, 56, 0);
         width: 100%;
@@ -98,107 +131,97 @@ nav ul li:hover {
         display: none;
     }
 
-    .show-menu nav {
+    .show-menu nav{
         display: block;
     }
 
-    nav ul {
+    nav ul{
         flex-direction: column;
     }
 
-    nav ul li {
+    nav ul li{
         text-align: center;
         padding: 0.8rem;
+
     }
+
+
 }
 
-/* Main */
-main {
+/*header*/
+
+/*main*/
+main{
     background-color: white;
-    padding-top: 70px; /* Para garantir que o conteúdo não fique atrás da navbar */
 }
 
-/* Background verde */
-.green-background {
+.green-background{
     background-color: rgb(0, 56, 0);
 }
 
-.page-inner-content {
+.page-inner-content{
     max-width: 1280px;
     margin: 0 auto;
 }
 
-/* Layout de grid */
-.colums {
+.colums{
     display: grid;
     justify-content: space-evenly;
     padding: 4rem 1rem;
 }
 
-.colums-3 {
+.colums-3{
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
 }
-
-img {
+img{
     width: 350px;
-    height: auto;
+  height: auto;
 }
-
-.colums-3 img {
+.colums-3 img{
     max-width: 100%;
 }
-
-.colums-4 img {
+.colums-4 img{
     max-width: 100%;
-}
-
-.colums-4 {
-    grid-template-columns: repeat(4, 1fr);
+} 
+.colums-4{
+    grid-template-columns:  repeat(4, 1fr);
     gap: 1rem;
-}
-
-.colums>*div {
+} 
+.colums>*div{
     cursor: pointer;
     transition: all 0.2s;
 }
-
-.colums>*:hover {
+.colums>*:hover{
     transform: translateY(-5px);
 }
-
-.section-title {
+.section-title{
     text-align: center;
     margin-top: 4rem;
     font-size: 1.8rem;
 }
-
-.subtitle-underline {
+.subtitle-underline{
     width: 100px;
     height: 5px;
     background-color: blue;
     border-radius: 9999px;
     margin: 8px auto 0 auto;
 }
-
-.product {
+.product{
     color: #2c2c2c;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
 }
-
-.product-name {
+.product-name{
     font-weight: 600;
     margin-top: 0.4rem;
 }
-
-.rate {
+.rate{
     color: rgb(0, 47, 255);
     font-size: 1.3rem;
 }
-
-.product-price span {
+.product-price span{
     font-weight: 600;
-}
 
+}
